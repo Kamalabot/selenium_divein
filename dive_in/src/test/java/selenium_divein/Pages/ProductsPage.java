@@ -3,6 +3,7 @@ package selenium_divein.Pages;
 import selenium_divein.Tests.SeleniumTest;
 import org.openqa.selenium.By;
 import org.testng.Assert;
+import com.aventstack.extentreports.Status; 
 
 public class ProductsPage {
   public static String formal_sh = "/html/body/div[2]/center/h2";
@@ -22,19 +23,27 @@ public class ProductsPage {
     String expectedTitle = "Formal Shoes";
     String verfiedTitle = SeleniumTest.driver.findElement(By.xpath(formal_sh)).getText();
     Assert.assertEquals(expectedTitle, verfiedTitle);
+    if (expectedTitle.equals(verfiedTitle)){
+      SeleniumTest.test.log(Status.PASS, "Verification of Formal Shoes succeeded");
+    }
   }
 
   public static void verify_title_sports() {
     String expectedTitle = "Sports Shoes";
     String verfiedTitle = SeleniumTest.driver.findElement(By.xpath(sports_sh)).getText();
     Assert.assertEquals(expectedTitle, verfiedTitle);
-
+    if (expectedTitle.equals(verfiedTitle)){
+      SeleniumTest.test.log(Status.PASS, "Verification of Sports Shoes succeeded");
+    }
   }
 
   public static void verify_title_sneakers() {
     String expectedTitle = "Sneakers";
     String verfiedTitle = SeleniumTest.driver.findElement(By.xpath(sneakers_sh)).getText();
     Assert.assertEquals(expectedTitle, verfiedTitle);
+    if (expectedTitle.equals(verfiedTitle)){
+      SeleniumTest.test.log(Status.PASS, "Verification of Sneakers succeeded");
+    }
 
   }
 
