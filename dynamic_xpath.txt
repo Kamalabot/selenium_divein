@@ -1,0 +1,56 @@
+
+Using contains() for Partial Text Match:
+
+Locates elements that contain specific text, helpful when the full text might change or is dynamic.
+
+Example: WebElement productTitle = driver.findElement(By.xpath("//span[contains(text(),'Products')]"));
+
+Using starts-with() for Matching Prefixes:
+
+Finds elements where an attribute starts with a specific string.
+
+Example:WebElement firstProduct = driver.findElement(By.xpath("//div[starts-with(@class,'inventory_item')]"));
+
+Using ancestor Axis to Find Parent Elements:
+
+Traverses up the DOM tree to find a parent element relative to a known child element.
+
+Example:WebElement firstProductPrice = driver.findElement(By.xpath("//div[text()='Sauce Labs Backpack']/ancestor::div[@class='inventory_item']//div[@class='inventory_item_price']"));
+
+Using following-sibling to Locate a Sibling Element:
+
+Finds an element that is a sibling (next to) another element in the DOM.
+
+Example: WebElement addToCartButton = driver.findElement(By.xpath("//div[text()='Sauce Labs Backpack']/following-sibling::div//button"));
+
+Using Indexing to Access Specific Elements:
+
+Handles scenarios where you need to interact with a specific item in a list of similar elements.
+
+Example: List<WebElement> inventoryItems = driver.findElements(By.xpath("//div[@class='inventory_item']"));
+
+Using text() Function:
+
+The text() function selects nodes that match the exact text provided. 
+This is useful when you need to match elements by their visible text on the webpage.
+
+Using and & or Conditions:
+
+XPath allows combining multiple conditions using and & or operators to create more complex locators.
+This is beneficial when an element must satisfy multiple criteria.
+
+Using not() Function:
+
+The not() function is used to locate elements that do not match a specific condition.
+This is useful when you want to exclude certain elements from selection.
+
+Using self Axis:
+
+The self axis refers to the context node itself. This is useful when you want to apply a filter
+directly to the current node.
+
+
+Using preceding-sibling Axis:
+
+The preceding-sibling axis locates elements that appear before a specific element in the DOM.
+This is useful for finding related elements that appear before a reference element.
