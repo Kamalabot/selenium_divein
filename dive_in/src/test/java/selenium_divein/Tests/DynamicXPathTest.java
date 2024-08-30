@@ -26,6 +26,7 @@ public class DynamicXPathTest {
         // Perform login
         WebElement usernameField = driver.findElement(By.id("user-name"));
         WebElement passwordField = driver.findElement(By.id("password"));
+    //  If the below By.id fails, or throws error. The exception can be caught
         WebElement loginButton = driver.findElement(By.id("login-button"));
         usernameField.sendKeys("standard_user");
         passwordField.sendKeys("secret_sauce");
