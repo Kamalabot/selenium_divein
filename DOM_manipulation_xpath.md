@@ -20,6 +20,7 @@ Below is a detailed guide that lists various types of dynamic changes in a front
 ```
 
 - **Handling in Automation**:
+  
   - Use explicit waits (e.g., WebDriverWait in Selenium) to wait until the element is present or visible.
     
     ```python
@@ -37,12 +38,15 @@ Below is a detailed guide that lists various types of dynamic changes in a front
 ### How to Capture:
 
 - **XPath Strategy**: Use dynamic attribute values or contain conditions to capture elements.
+
 - **Example XPath**:
   
   ```xpath
   //button[contains(@class, 'active')]  // Captures button with dynamically changed class
   ```
+
 - **Handling in Automation**:
+  
   - Wait for attribute changes using JavaScript execution in testing frameworks.
 
 ## 3. Dynamic Element Visibility (Show/Hide)
@@ -55,12 +59,15 @@ Below is a detailed guide that lists various types of dynamic changes in a front
 ### How to Capture:
 
 - **XPath Strategy**: Target the element directly but use visibility or display checks.
+
 - **Example XPath**:
   
   ```xpath
   //div[@id='menu']//a[@style='display: block;']
   ```
+
 - **Handling in Automation**:
+  
   - Wait for element to be visible:
     
     ```python
@@ -79,12 +86,15 @@ Below is a detailed guide that lists various types of dynamic changes in a front
 ### How to Capture:
 
 - **XPath Strategy**: Use `contains()` or `starts-with()` to match partial dynamic attribute values.
+
 - **Example XPath**:
   
   ```xpath
   //div[starts-with(@id, 'dynamic-') and contains(@class, 'highlight')]
   ```
+
 - **Handling in Automation**:
+  
   - Use attribute-specific waits if needed.
 
 ## 5. Animation Effects (Fade In/Out, Slide, etc.)
@@ -96,12 +106,15 @@ Below is a detailed guide that lists various types of dynamic changes in a front
 ### How to Capture:
 
 - **XPath Strategy**: Use existing identifiers or attributes and wait for animation completion.
+
 - **Example XPath**:
   
   ```xpath
   //div[@id='popup' and contains(@style, 'opacity: 1')]
   ```
+
 - **Handling in Automation**:
+  
   - Use JavaScript executors to wait until animations are completed.
 
 ## 6. Dynamic Dropdowns or Auto-Suggestions
@@ -113,12 +126,15 @@ Below is a detailed guide that lists various types of dynamic changes in a front
 ### How to Capture:
 
 - **XPath Strategy**: Capture the dropdown or suggestions dynamically using their structure.
+
 - **Example XPath**:
   
   ```xpath
   //ul[@class='suggestions']//li[contains(text(), 'Dynamic Option')]
   ```
+
 - **Handling in Automation**:
+  
   - Click the input field, type, and then wait for the dropdown to appear.
 
 ## 7. Lazy Loading of Images or Content
@@ -130,12 +146,15 @@ Below is a detailed guide that lists various types of dynamic changes in a front
 ### How to Capture:
 
 - **XPath Strategy**: Target attributes like `data-src` that are replaced once loaded.
+
 - **Example XPath**:
   
   ```xpath
   //img[contains(@data-src, 'image-name')]
   ```
+
 - **Handling in Automation**:
+  
   - Scroll into view and wait for the element to be loaded.
 
 ## 8. Dynamic Modal or Pop-up Windows
@@ -147,12 +166,15 @@ Below is a detailed guide that lists various types of dynamic changes in a front
 ### How to Capture:
 
 - **XPath Strategy**: Target the modal container and its dynamic elements.
+
 - **Example XPath**:
   
   ```xpath
   //div[contains(@class, 'modal') and @aria-hidden='false']
   ```
+
 - **Handling in Automation**:
+  
   - Wait for the modal to be visible and interact with its elements.
 
 ## 9. Single Page Application (SPA) Content Changes
@@ -164,12 +186,15 @@ Below is a detailed guide that lists various types of dynamic changes in a front
 ### How to Capture:
 
 - **XPath Strategy**: Capture changes in the SPA container.
+
 - **Example XPath**:
   
   ```xpath
   //div[@id='app']//h1[contains(text(), 'Welcome')]
   ```
+
 - **Handling in Automation**:
+  
   - Use waits that cater to specific changes in the DOM.
 
 ## 10. User-Generated Content (Comments, Posts)
@@ -181,12 +206,15 @@ Below is a detailed guide that lists various types of dynamic changes in a front
 ### How to Capture:
 
 - **XPath Strategy**: Use dynamic text or attributes.
+
 - **Example XPath**:
   
   ```xpath
   //div[@class='user-comment' and contains(text(), 'Sample Comment')]
   ```
+
 - **Handling in Automation**:
+  
   - Ensure to handle scenarios where content can change frequently.
     
     ```
