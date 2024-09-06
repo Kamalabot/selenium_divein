@@ -221,6 +221,28 @@ Below is a detailed guide that lists various types of dynamic changes in a front
     
     ```
 
+### ### XPath to Capture the Links:
+
+1. To select all the `<a>` tags in the list:
+   
+   `//ul/li/a`
+
+2. To select the href attribute of all links:
+   
+   //ul/li/a/@href`
+
+3. To select a specific link text, for example, "Example 3":
+   
+   `//a[text()='Example 3']`
+
+4. To select the 2nd link:
+   
+   //ul/li[2]/a`
+
+5. To select the link that contains "Example 5" in its text:
+   
+   `//a[contains(text(), 'Example 5')]`
+
 ### Summary
 
 To handle dynamic front-end changes efficiently in test automation:

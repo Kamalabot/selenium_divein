@@ -1,6 +1,7 @@
 package selenium_divein.Pages;
 
 import selenium_divein.Tests.*;
+import selenium_divein.Tests.SeleniumTest;
 import org.openqa.selenium.By;
 
 public class HomePage{
