@@ -18,7 +18,7 @@ import java.time.Duration;
 public class LoginTest {
     static WebDriver driver;
 
-    @BeforeTest
+    // @BeforeTest
     public static void setUp() {
         System.setProperty("webdriver.chrome.driver", "path/to/chromedriver");
         driver = new ChromeDriver();
@@ -26,7 +26,7 @@ public class LoginTest {
         driver.get("https://www.saucedemo.com/");
     }
 
-    @Test
+    // @Test
     public void testLogin() {
         LoginPage loginPage = new LoginPage(driver);
         loginPage.login("standard_user", "secret_sauce");

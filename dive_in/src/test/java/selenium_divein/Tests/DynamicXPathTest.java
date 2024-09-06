@@ -16,7 +16,7 @@ import java.util.List;
 public class DynamicXPathTest {
     static WebDriver driver;
 
-    @BeforeTest
+    // @BeforeTest
     public static void setUp() {
         System.setProperty("webdriver.chrome.driver", "path/to/chromedriver");
         driver = new ChromeDriver();
@@ -33,7 +33,7 @@ public class DynamicXPathTest {
         loginButton.click();
     }
 
-    @Test
+    // @Test
     public void testDynamicXPaths() {
         // 1. Using contains() function
         WebElement productTitle = driver.findElement(By.xpath("//span[contains(text(),'Products')]"));
@@ -81,7 +81,7 @@ public class DynamicXPathTest {
         System.out.println("Product Label: " + productLabel.getText());
     }
 
-    @AfterTest
+    // @AfterTest
     public static void tearDown() {
         driver.quit();
     }

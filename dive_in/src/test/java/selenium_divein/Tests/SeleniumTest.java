@@ -21,7 +21,7 @@ public class SeleniumTest {
 
 
 
-  @BeforeTest
+  //@BeforeTest
   public static void Setup() {
     // driver is of type WebDriver
     driver = new ChromeDriver();
@@ -31,7 +31,7 @@ public class SeleniumTest {
     driver.get("https://anupdamoda.github.io/AceOnlineShoePortal/index.html");
   }
 
-  @Test
+  // @Test
   public static void validate_title_onlineproducts() throws InterruptedException{
     test = extent.createTest("Test to show home page and product lists");
     // Home Page

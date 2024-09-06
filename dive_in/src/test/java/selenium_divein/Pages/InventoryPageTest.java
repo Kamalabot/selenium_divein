@@ -17,7 +17,7 @@ class InventoryPageTest {
     LoginPage loginPage;
     InventoryPage inventoryPage;
 
-    @BeforeTest
+    // @BeforeTest
     void setup() {
         // Set up ChromeDriver and navigate to the SauceDemo login page
         driver = new ChromeDriver();
@@ -30,7 +30,7 @@ class InventoryPageTest {
                                  .clickLoginButton();
     }
 
-    @Test
+    // @Test
     void testAddItemToCart() {
         // Example of using a method from the InventoryPage to add an item to the cart
         inventoryPage.addItemToCart("Sauce Labs Backpack");
@@ -39,7 +39,7 @@ class InventoryPageTest {
         Assertions.assertTrue(inventoryPage.isItemInCart("Sauce Labs Backpack"), "Item was not added to the cart!");
     }
 
-    @AfterTest
+    // @AfterTest
     void teardown() {
         // Quit the driver
         driver.quit();

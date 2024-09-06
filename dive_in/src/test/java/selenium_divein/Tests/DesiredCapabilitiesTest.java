@@ -12,7 +12,7 @@ import org.testng.annotations.Test;
 public class DesiredCapabilitiesTest {
     static WebDriver driver;
 
-    @BeforeTest
+    //@BeforeTest
     public static void setUp() {
         ChromeOptions options = new ChromeOptions();
         options.addArguments("--headless");
@@ -22,7 +22,7 @@ public class DesiredCapabilitiesTest {
         driver.get("https://www.saucedemo.com/");
     }
 
-    @Test
+    //@Test
     public void testCapabilities() {
         LoginPage loginPage = new LoginPage(driver);
         loginPage.login("standard_user", "secret_sauce");

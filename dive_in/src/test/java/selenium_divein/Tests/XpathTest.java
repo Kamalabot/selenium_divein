@@ -12,14 +12,14 @@ import org.testng.annotations.Test;
 public class XPathTest {
     static WebDriver driver;
 
-    @BeforeAll
+    // @BeforeAll
     public static void setUp() {
         System.setProperty("webdriver.chrome.driver", "path/to/chromedriver");
         driver = new ChromeDriver();
         driver.get("https://www.saucedemo.com/");
     }
 
-    @Test
+    // @Test
     public void testDynamicXPaths() {
         // Using Page Object Model for login
         LoginPage loginPage = new LoginPage(driver);

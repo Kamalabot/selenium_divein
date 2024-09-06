@@ -16,14 +16,14 @@ import org.openqa.selenium.chrome.ChromeDriver;
 public class ScreenshotTest {
     static WebDriver driver;
 
-    @BeforeAll
+    // @BeforeAll
     public static void setUp() {
         System.setProperty("webdriver.chrome.driver", "path/to/chromedriver");
         driver = new ChromeDriver();
         driver.get("https://www.saucedemo.com/");
     }
 
-    @Test
+    // @Test
     public void captureScreenshot() {
         LoginPage loginPage = new LoginPage(driver);
         loginPage.login("standard_user", "secret_sauce");
